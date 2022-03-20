@@ -11,7 +11,7 @@ public class SbwebBaseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SbwebBaseApplication.class, args);
-		log.info("App available at: localhost:8090/hvdangApp/rest/demo/employees");
+		log.info("App available at: localhost:8090/hvdangApp/swagger-ui/");
 		log.info("App available at: localhost:8090/hvdangApp/h2-console");
 	}
 

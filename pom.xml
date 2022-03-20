@@ -39,6 +39,13 @@
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
+    <!-- documenting ...-->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-boot-starter</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
     <!-- more utils .. -->
     <dependency>
       <groupId>com.h2database</groupId>

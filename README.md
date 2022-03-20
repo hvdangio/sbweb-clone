@@ -8,10 +8,10 @@ simple web-base on top of springboot
 ## UnitTest
 * Run SbwebBaseApplicationTests.main()
 * See demo available under:
-  localhost:8090/hvdangApp/rest/demo/employees
+  localhost:8090/hvdangApp/swagger-ui/
 
 ## How to use?
 * Use release sbweb-base-1.0.1.jar as your base dependency in Java projects
 * Rebuild maven:package with profile "standalone-build"
   * Then run executable JAR (on top of springboot) for demo
-  * Try result at: localhost:8090/hvdangApp/rest/demo/employees
+  * Try result at: localhost:8090/hvdangApp/swagger-ui/
