@@ -21,6 +21,13 @@
     <maven.compiler.target>8</maven.compiler.target>
   </properties>
 
+  <scm>
+    <!-- scm config for release -->
+    <connection>scm:git:https://github.com/hvdangio/sbweb-base.git</connection>
+    <url>https://github.com/hvdangio/sbweb-base</url>
+    <developerConnection>scm:git:https://github.com/hvdangio/sbweb-base.git</developerConnection>
+  </scm>
+
   <dependencies>
     <!-- core dependencies -->
     <dependency>
@@ -65,5 +72,19 @@
       </build>
     </profile>
   </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <releaseProfiles>releases</releaseProfiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
