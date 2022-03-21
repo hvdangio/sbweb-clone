@@ -1,7 +1,8 @@
 # sbweb-base
 simple web-base on top of springboot
 * Ref: [Spring Initializr](https://start.spring.io/)
-* Support REST API under: AppContext/rest/*: done
+* Support REST API under: AppContext/rest/*: done  
+  * Support Swagger: AppContext/swagger-ui/*: done
 * Support SOAP API under: AppContext/soap/*: todo
 * Support Web pages under: AppContext/web/*: todo
 
