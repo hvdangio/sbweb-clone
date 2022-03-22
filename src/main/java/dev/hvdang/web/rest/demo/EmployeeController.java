@@ -4,15 +4,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static dev.hvdang.web.rest.demo.EmployeeController.CONTEXT_URL_API_NAME;
+import static dev.hvdang.web.rest.demo.EmployeeController.CONTEXT_URL;
 import static dev.hvdang.web.sbwebbase.SBWEB_CONFIG.CONTEXT_URL_REST_API;
 
 
 @RestController
-@RequestMapping(value = CONTEXT_URL_API_NAME)
+@RequestMapping(value = CONTEXT_URL)
 public class EmployeeController
 {
-  public static final String CONTEXT_URL_API_NAME = CONTEXT_URL_REST_API + "/demo";
+  public static final String CONTEXT_URL = CONTEXT_URL_REST_API + "/demo";
 
   private final EmployeeRepository repository;
 
