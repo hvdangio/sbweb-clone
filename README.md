@@ -4,12 +4,13 @@ simple web-base on top of springboot
 * Support REST API under: AppContext/rest/*: done  
   * Support Swagger: AppContext/swagger-ui/*: done
 * Support SOAP API under: AppContext/soap/*: todo
-* Support Web pages under: AppContext/web/*: todo
+* Support Web pages under: AppContext/web/*: done
 
 ## UnitTest
 * Run SbwebBaseApplicationTests.main()
 * See demo available under:
-  localhost:8090/hvdangApp/swagger-ui/
+  * localhost:8090/hvdangApp/swagger-ui/
+  * localhost:8090/hvdangApp/web/demo/
 
 ## How to use?
 * Use release sbweb-base-1.0.1.jar as your base dependency in Java projects
