@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Arrays;
 import java.util.List;
 
+import static dev.hvdang.web.web.demo.WelcomeController.CONTEXT_VIEW;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -32,7 +33,7 @@ class WelcomeControllerTest {
   public void welcome() throws Exception {
     ResultActions resultActions = mockMvc.perform(get("/web/demo/"))
         .andExpect(status().isOk())
-        .andExpect(view().name("/web/demo/welcome"))
+        .andExpect(view().name(String.format("%s/%s", CONTEXT_VIEW, "welcome")))
         .andExpect(model().attribute("message", equalTo("hvdang.io")))
         .andExpect(model().attribute("tasks", equalTo(expectedList)))
         .andExpect(content().string(containsString("Hello, hvdang.io")));
@@ -45,7 +46,7 @@ class WelcomeControllerTest {
   public void hello() throws Exception {
     mockMvc.perform(get("/web/demo/hello").param("name", "I Love Kotlin!"))
         .andExpect(status().isOk())
-        .andExpect(view().name("/web/demo/welcome"))
+        .andExpect(view().name(String.format("%s/%s", CONTEXT_VIEW, "welcome")))
         .andExpect(model().attribute("message", equalTo("I Love Kotlin!")))
         .andExpect(content().string(containsString("Hello, I Love Kotlin!")));
   }

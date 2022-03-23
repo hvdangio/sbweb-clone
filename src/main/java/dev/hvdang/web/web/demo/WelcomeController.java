@@ -20,6 +20,7 @@ import static dev.hvdang.web.sbwebbase.SBWEB_CONFIG.CONTEXT_URL_WEB_PAGE;
 @RequestMapping(value = WelcomeController.CONTEXT_URL)
 public class WelcomeController {
   public static final String CONTEXT_URL = CONTEXT_URL_WEB_PAGE + "/demo";
+  public static final String CONTEXT_VIEW = CONTEXT_URL.substring(1); //ignore "/"
 
   // inject via application.properties
   @Value("${web.demo.welcome.message}")
@@ -40,7 +41,7 @@ public class WelcomeController {
   public String welcome(Model model) {
     model.addAttribute("message", message);
     model.addAttribute("tasks", tasks);
-    return String.format("%s/%s", CONTEXT_URL, "welcome"); //view
+    return String.format("%s/%s", CONTEXT_VIEW, "welcome"); //view
   }
 
   // /hello?name=kotlin
@@ -49,21 +50,21 @@ public class WelcomeController {
       @RequestParam(name = "name", required = false, defaultValue = "")
           String name, Model model) {
     model.addAttribute("message", name);
-    return String.format("%s/%s", CONTEXT_URL, "welcome"); //view
+    return String.format("%s/%s", CONTEXT_VIEW, "welcome"); //view
   }
 
   //---------------- Part #2
   @GetMapping(value = {"/personList"})
   public String personList(Model model) {
     model.addAttribute("persons", persons);
-    return String.format("%s/%s", CONTEXT_URL, "personList"); //view
+    return String.format("%s/%s", CONTEXT_VIEW, "personList"); //view
   }
 
   @GetMapping(value = {"/addPerson"})
   public String showAddPersonPage(Model model) {
     PersonForm personForm = new PersonForm();
     model.addAttribute("personForm", personForm);
-    return String.format("%s/%s", CONTEXT_URL, "addPerson"); //view
+    return String.format("%s/%s", CONTEXT_VIEW, "addPerson"); //view
   }
 
   @PostMapping(value = {"/addPerson"})
@@ -78,6 +79,6 @@ public class WelcomeController {
       return String.format("redirect:%s/%s", CONTEXT_URL, "personList"); //view
     }
     model.addAttribute("errorMessage", errorMessage);
-    return String.format("%s/%s", CONTEXT_URL, "addPerson"); //view
+    return String.format("%s/%s", CONTEXT_VIEW, "addPerson"); //view
   }
 }
