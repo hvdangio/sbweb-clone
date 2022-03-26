@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_NAME=${1:-"sbweb-base-1.0.2.jar"}
+APP_NAME=${1:-"sbweb-clone-1.0.2.jar"}
 USR_NAME=hvdangdev
 USR_DOPS=devops
 

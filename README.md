@@ -1,19 +1,14 @@
-# sbweb-base
-simple web-base on top of springboot
-* Ref: [Spring Initializr](https://start.spring.io/)
-* Support REST API under: AppContext/rest/*: done  
-  * Support Swagger: AppContext/swagger-ui/*: done
-* Support SOAP API under: AppContext/soap/*: todo
-* Support Web pages under: AppContext/web/*: done
+# sbweb-clone
+simple web-clone on top of sbweb-base just for fun, demo, & practice
+* Ref: [sbweb-base](https://github.com/hvdangio/sbweb-base)
+* Support web clone under: AppContext/web/clone/*: todo
 
 ## UnitTest
-* Run SbwebBaseApplicationTests.main()
+* Run SbwebApplicationTest.main()
 * See demo available under:
-  * localhost:8090/hvdangApp/swagger-ui/
-  * localhost:8090/hvdangApp/web/demo/
+  * localhost:8091/hvdangApp/web/clone/
 
 ## How to use?
-* Use release sbweb-base-1.0.1.jar as your base dependency in Java projects
+* Use release sbweb-clone-1.0.1.jar as your base dependency in Java projects
 * Rebuild maven:package with profile "standalone-build"
   * Then run executable JAR (on top of springboot) for demo
-  * Try result at: localhost:8090/hvdangApp/swagger-ui/
